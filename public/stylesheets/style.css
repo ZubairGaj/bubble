@@ -1,0 +1,108 @@
+body {
+  padding: 40px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.cards{
+  /* border: solid black 1px; */
+  margin: auto
+}
+
+.writing{
+  font-family: 'Permanent Marker', cursive;
+}
+
+.textfont {
+  font-family: 'Aladin', cursive;
+}
+
+.form-design{
+  width: 100%;
+  font-family: 'Aladin', cursive;
+}
+
+.form-design input{
+  width: 20%;
+}
+
+.showAddCard button{
+  width: 30px;
+  padding: 20px;
+}
+
+.addCard input{
+  width: 100px
+}
+
+.addCard{
+  text-align: center;
+}
+
+.addCard input:hover{
+  width: 150px
+}
+
+.todoCard {
+  width: 30%;
+  height: 150px;
+  margin: 100px 0;
+  overflow: scroll;
+  padding: 30px 30px;
+  border: solid cccccc 1px;
+  display: inline-block;
+  text-align: center;
+  background: #18bcd1;
+}
+
+.todoCard:hover {
+  background: #d11893;
+  color: white;
+}
+
+.clean-form{
+  text-align: center;
+  padding: 0 200px;
+}
+
+/* Modaltest */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

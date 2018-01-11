@@ -1,0 +1,95 @@
+<div>
+  <div class="wrapper">
+{{!-- 
+title
+description
+clickThroughUrl
+type
+priority
+notes
+addedBy
+category
+  --}}
+    <div id="myModal" class="modal"><!-- The Modal -->
+      <div class="modal-content"><!-- Modal content -->
+        <span class="close">&times;</span>
+        <div class="">
+          <form action="/addCard" method="post" onload="dateAuto()">
+            <div class="form-group">
+              <label for="Title">Title:</label>
+              <br>
+              <input class="form-control" type="text" name="title" placeholder="Note Title">
+            </div>
+            <div class="form-group">
+              <label for="Description">Description:</label>
+              <br>
+              <input class="form-control" type="text" name="description" placeholder="Note Description">
+            </div>
+            <div class="form-group">
+              <label for="Type">Type:</label>
+              <br>
+              <select name="Type" class="form-control">
+                <option value="Personal Projects">Personal Projects</option>
+                <option value="Work Projects">Work Projects</option>
+                <option value="Coursework">Coursework</option>
+                <option value="Information">Information</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="Clickthroughurl">Url:</label>
+              <br>
+              
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">http://</span>
+                </div>
+                <input type="text" name="Clickthroughurl" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="url">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Category">Category:</label>
+              <br>
+              <select name="Category" class="form-control">
+                <option value="ApiExplorer">ApiExplorer</option>
+                <option value="Anon.io">Anon.io</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="priority">Priority:</label>
+              <br>
+              <select name="priority" class="form-control">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
+            <div class="form-group" style="display:none;">
+              <input class="form-control" type="text" name="Author" value="ZubairGaj">
+            </div>
+            <input type="submit" class="form-control" value="Add Card">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cards textfont">
+        {{# each content }}
+          <div class="todoCard">
+              <h3 class="writing"> {{ this.title }}</h3>
+              <h5> {{ this.description}} </h5>
+          </div>
+        {{/each}}
+        <div class="todoCard writing" id="myBtn">
+          <h2> Click to add a new card</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="mediumPriority col-md-12">
+    </div>
+    <div class="lowPriority col-md-2"></div>
+  </div>
+</div>
